@@ -1,0 +1,31 @@
+
+
+spring:
+  application:
+    name: spring-kafka-sample
+
+  kafka:
+    client-id: ${spring.application.name}
+    bootstrap-servers: sneo4j001:9092,sneo4j002:9092,scallcenter001:9092,shazelcast001:9092,shazelcast002:9092
+    consumer:
+      group-id: ${spring.application.name}
+      heartbeat-interval: 30
+      max-poll-records: 30
+      enable-auto-commit: false
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+    producer:
+      batch-size: 10
+      retries: 3
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+
+info:
+  app:
+    developer:
+      name: Satyendra Sharma
+      email: satyendra.sharma@voyant.com
