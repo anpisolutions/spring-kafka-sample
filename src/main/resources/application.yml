@@ -6,7 +6,7 @@ spring:
 
   kafka:
     client-id: ${spring.application.name}
-    bootstrap-servers: sneo4j001:9092,sneo4j002:9092,scallcenter001:9092,shazelcast001:9092,shazelcast002:9092
+    bootstrap-servers: localhost:9092
     consumer:
       group-id: ${spring.application.name}
       heartbeat-interval: 30
