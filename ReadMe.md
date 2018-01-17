@@ -17,10 +17,11 @@ Spring boot sample app includes Message listener from kafka topic and a Rest con
   ```sh
    $ mvn clean -DskipTests=true package
    ```
-   - Run Jar file
+  - Run Jar file
    ```sh
    $ java -jar <buildfile>
    ```
+   
 # Post message to kafka topic
  - Controller has been added with sample project to post messages to kafka topics.
  -  curl -X POST -d 'Hi Satyendra' http://localhost:8080/post-message/test-topic
